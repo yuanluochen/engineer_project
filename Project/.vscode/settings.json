@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.md": "markdown",
+        "main.h": "c",
+        "robot_arm_task.h": "c",
+        "limits": "c",
+        "ostream": "c",
+        "streambuf": "c",
+        "vector": "c",
+        "*.tcc": "c",
+        "compare": "c",
+        "typeinfo": "c"
+    }
+}
