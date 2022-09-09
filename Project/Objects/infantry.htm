@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\infantry.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\infantry.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Sep 07 15:56:57 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Sep 08 17:29:42 2022
 <BR><P>
 <H3>Maximum Stack Usage =        280 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1806,14 +1806,14 @@ Global Symbols
 
 <P><STRONG><a name="[112]"></a>first_order_filter_cali</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, user_lib.o(i.first_order_filter_cali))
 <BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_rc_to_control_vector
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_state_enable_control
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_rc_to_control_vector
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_state_enable_control
 </UL>
 
 <P><STRONG><a name="[110]"></a>first_order_filter_init</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, user_lib.o(i.first_order_filter_init))
 <BR><BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_init
-<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_init
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_init
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_init
 </UL>
 
 <P><STRONG><a name="[d5]"></a>flow_led_off</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, led.o(i.flow_led_off))
@@ -1892,8 +1892,8 @@ Global Symbols
 
 <P><STRONG><a name="[10e]"></a>get_remote_control_point</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, remote_control.o(i.get_remote_control_point))
 <BR><BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_init
-<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_init
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_init
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_init
 </UL>
 
 <P><STRONG><a name="[e6]"></a>get_temprate</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, adc.o(i.get_temprate))
@@ -3239,7 +3239,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_behaviour_control_set
 </UL>
 
-<P><STRONG><a name="[13f]"></a>chassis_no_follow_yaw_control</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, chassis_behaviour.o(i.chassis_no_follow_yaw_control))
+<P><STRONG><a name="[13f]"></a>chassis_no_follow_yaw_control</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, chassis_behaviour.o(i.chassis_no_follow_yaw_control))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = chassis_no_follow_yaw_control &rArr; chassis_rc_to_control_vector
 </UL>
 <BR>[Calls]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_rc_to_control_vector
@@ -3294,7 +3294,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chassis_task
 </UL>
 
-<P><STRONG><a name="[148]"></a>chassis_set_contorl</STRONG> (Thumb, 558 bytes, Stack size 32 bytes, chassis_task.o(i.chassis_set_contorl))
+<P><STRONG><a name="[148]"></a>chassis_set_contorl</STRONG> (Thumb, 562 bytes, Stack size 32 bytes, chassis_task.o(i.chassis_set_contorl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = chassis_set_contorl &rArr; chassis_behaviour_control_set &rArr; chassis_no_follow_yaw_control &rArr; chassis_rc_to_control_vector
 </UL>
 <BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;loop_fp32_constrain
@@ -3362,79 +3362,6 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[a9]"></a>ARM_control_loop</STRONG> (Thumb, 404 bytes, Stack size 56 bytes, robot_arm_task.o(i.ARM_control_loop))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = ARM_control_loop &rArr; __aeabi_d2f
-</UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Arm_vector_to_speed
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_fabs
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
-</UL>
-
-<P><STRONG><a name="[aa]"></a>Arm_vector_to_speed</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, robot_arm_task.o(i.Arm_vector_to_speed))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ARM_control_loop
-</UL>
-
-<P><STRONG><a name="[10a]"></a>Robot_arm_behaviour_control_set</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_behaviour_control_set))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Robot_arm_behaviour_control_set &rArr; Robot_arm_run_control &rArr; Robot_arm_rc_to_control_vector
-</UL>
-<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_zero_force_control
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_run_control
-</UL>
-<BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_set_control
-</UL>
-
-<P><STRONG><a name="[10d]"></a>Robot_arm_init</STRONG> (Thumb, 120 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Robot_arm_init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;first_order_filter_init
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Arm_Motor_Measure_Point
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_remote_control_point
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
-</UL>
-
-<P><STRONG><a name="[116]"></a>Robot_arm_mode_change_control_transit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, robot_arm_task.o(i.Robot_arm_mode_change_control_transit))
-<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
-</UL>
-
-<P><STRONG><a name="[111]"></a>Robot_arm_rc_to_control_vector</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, robot_arm_task.o(i.Robot_arm_rc_to_control_vector))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Robot_arm_rc_to_control_vector
-</UL>
-<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;first_order_filter_cali
-</UL>
-<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_run_control
-</UL>
-
-<P><STRONG><a name="[10c]"></a>Robot_arm_run_control</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_run_control))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Robot_arm_run_control &rArr; Robot_arm_rc_to_control_vector
-</UL>
-<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_rc_to_control_vector
-</UL>
-<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_behaviour_control_set
-</UL>
-
-<P><STRONG><a name="[113]"></a>Robot_arm_set_control</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_set_control))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Robot_arm_set_control &rArr; Robot_arm_behaviour_control_set &rArr; Robot_arm_run_control &rArr; Robot_arm_rc_to_control_vector
-</UL>
-<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fp32_constrain
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_behaviour_control_set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
-</UL>
-
-<P><STRONG><a name="[115]"></a>Robot_arm_set_mode</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, robot_arm_task.o(i.Robot_arm_set_mode))
-<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
-</UL>
-
-<P><STRONG><a name="[10b]"></a>Robot_arm_zero_force_control</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, robot_arm_task.o(i.Robot_arm_zero_force_control))
-<BR><BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_behaviour_control_set
-</UL>
-
 <P><STRONG><a name="[1a4]"></a>servo_angle_set_transmit</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, servo_task.o(i.servo_angle_set_transmit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = servo_angle_set_transmit
 </UL>
@@ -3498,6 +3425,79 @@ Local Symbols
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;servo_init
+</UL>
+
+<P><STRONG><a name="[a9]"></a>ARM_control_loop</STRONG> (Thumb, 404 bytes, Stack size 56 bytes, robot_arm_task.o(i.ARM_control_loop))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = ARM_control_loop &rArr; __aeabi_d2f
+</UL>
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Arm_vector_to_speed
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Calc
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_fabs
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
+</UL>
+
+<P><STRONG><a name="[aa]"></a>Arm_vector_to_speed</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, robot_arm_task.o(i.Arm_vector_to_speed))
+<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ARM_control_loop
+</UL>
+
+<P><STRONG><a name="[10a]"></a>Robot_arm_behaviour_control_set</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_behaviour_control_set))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = Robot_arm_behaviour_control_set &rArr; Robot_arm_run_control &rArr; Robot_arm_rc_to_control_vector
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_zero_force_control
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_run_control
+</UL>
+<BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_set_control
+</UL>
+
+<P><STRONG><a name="[10d]"></a>Robot_arm_init</STRONG> (Thumb, 120 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Robot_arm_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;first_order_filter_init
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Arm_Motor_Measure_Point
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_remote_control_point
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
+</UL>
+
+<P><STRONG><a name="[116]"></a>Robot_arm_mode_change_control_transit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, robot_arm_task.o(i.Robot_arm_mode_change_control_transit))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
+</UL>
+
+<P><STRONG><a name="[111]"></a>Robot_arm_rc_to_control_vector</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, robot_arm_task.o(i.Robot_arm_rc_to_control_vector))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Robot_arm_rc_to_control_vector
+</UL>
+<BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;first_order_filter_cali
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_run_control
+</UL>
+
+<P><STRONG><a name="[10c]"></a>Robot_arm_run_control</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_run_control))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Robot_arm_run_control &rArr; Robot_arm_rc_to_control_vector
+</UL>
+<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_rc_to_control_vector
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_behaviour_control_set
+</UL>
+
+<P><STRONG><a name="[113]"></a>Robot_arm_set_control</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, robot_arm_task.o(i.Robot_arm_set_control))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Robot_arm_set_control &rArr; Robot_arm_behaviour_control_set &rArr; Robot_arm_run_control &rArr; Robot_arm_rc_to_control_vector
+</UL>
+<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fp32_constrain
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_behaviour_control_set
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
+</UL>
+
+<P><STRONG><a name="[115]"></a>Robot_arm_set_mode</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, robot_arm_task.o(i.Robot_arm_set_mode))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_task
+</UL>
+
+<P><STRONG><a name="[10b]"></a>Robot_arm_zero_force_control</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, robot_arm_task.o(i.Robot_arm_zero_force_control))
+<BR><BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Robot_arm_behaviour_control_set
 </UL>
 
 <P><STRONG><a name="[138]"></a>AHRS_fabs</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, ahrs.o(i.AHRS_fabs))

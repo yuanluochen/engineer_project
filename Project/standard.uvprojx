@@ -864,14 +864,14 @@
               <FilePath>..\user\APP\user_task\user_task.c</FilePath>
             </File>
             <File>
-              <FileName>Robot_arm_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\standard1\user\APP\Arm_task\Robot_arm_task.c</FilePath>
-            </File>
-            <File>
               <FileName>servo_task.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\user\APP\servo_task\servo_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>Robot_arm_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\standard1\user\APP\Arm_task\Robot_arm_task.c</FilePath>
             </File>
           </Files>
         </Group>
